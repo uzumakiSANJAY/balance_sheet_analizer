@@ -1,0 +1,32 @@
+{
+  "name": "my-file",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npm-run-all prettier lint",
+    "local": "env-cmd -f .env.local nodemon -e js,json --exec npm run start",
+    "dev": "env-cmd -f .env npm run start",
+    "prod": "env-cmd -f .env.prod npm run start",
+    "prettier": "prettier --write .",
+    "lint": "eslint \"**/*.{js,mjs,cjs}\" --fix",
+    "start": "node server.js",
+    "migrate": "npx sequelize-cli db:migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "celebrate": "^15.0.3",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.0",
+    "nodemailer": "^7.0.3",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7"
+  }
+}
