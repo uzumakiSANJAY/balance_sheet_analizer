@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "npm-run-all prettier lint",
-    "local": "env-cmd -f .env.local nodemon -e js,json --exec npm run start",
+    "local": "env-cmd -f .env nodemon -e js,json --exec npm run start",
     "dev": "env-cmd -f .env npm run start",
     "prod": "env-cmd -f .env.prod npm run start",
     "prettier": "prettier --write .",

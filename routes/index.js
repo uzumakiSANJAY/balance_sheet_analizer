@@ -3,7 +3,7 @@ const router = express.Router();
 // Define all route mappings here
 const routeModules = [
   //   { path: "/common", module: require("./common.route") },
-  //   { path: "/google-search", module: require("./googleSearch.route") },
+    { path: "/users", module: require("./users/users.route") },
 ];
 
 // register routes

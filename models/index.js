@@ -6,9 +6,9 @@ db.sequelize = sequelize;
 
 // Models initialization
 
-// common
-
-// db.codeLibrary = require("./common/codeLibrary.model")(sequelize);
+db.userDetails = require("./users/userDetails.model").initModel(sequelize);
+db.userRoles = require("./users/userRoles.model").initModel(sequelize);
+db.userAuth = require("./users/userAuth.model").initModel(sequelize);
 
 // Call associate methods for every model
 Object.keys(db).forEach((model) => {
